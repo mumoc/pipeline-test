@@ -1,4 +1,17 @@
-test:
+travis: &travis
   adapter: postgresql
-  database: travis_ci_test
+  database: ptest
   username: postgres
+
+development:
+  <<: *travis
+
+test: &test
+  <<: *travis
+  database: ptestt
+
+cucumber:
+  <<: *test
+
+production:
+  <<: *travis
