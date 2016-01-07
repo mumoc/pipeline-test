@@ -4,6 +4,6 @@ class Some < ActiveRecord::Base
   end
 
   def self.tiki
-    true
+    false
   end
 end
